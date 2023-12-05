@@ -1,4 +1,5 @@
-~~~
+
+``` 
 public class GarbageMaker {
     public static void main(String[] args) {
         Object str = new String("str");
@@ -13,4 +14,4 @@ public class GarbageMaker {
         System.out.println((String)string.toString());
     }
 }
-~~~
+```
