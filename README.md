@@ -1,16 +1,17 @@
 ~~~
-public class GarbageMaker {
+public class GarbageProcessor {
     public static void main(String[] args) {
-        Object str = new String("str");
-        String stringStr = String.valueOf(str);
+        StringBuilder s = new StringBuilder(new String("S"));
+        StringBuilder t = new StringBuilder(new String("t"));
+        StringBuilder r = new StringBuilder(new String("r"));
+        StringBuilder i = new StringBuilder(new String("i"));
+        StringBuilder n = new StringBuilder(new String("n"));
+        StringBuilder g = new StringBuilder(new String("g"));
 
-        Object ing = new String("ing");
-        String stringIng = String.valueOf(ing);
+        Object stringBuilder = s.append(t).append(r).append(i).append(n).append(g);
+        String string = new String(String.valueOf((String)stringBuilder.toString()));
 
-        Object oString = (String)str.toString() + (String)ing.toString();
-        String string = String.valueOf(oString);
-        
-        System.out.println((String)string.toString());
+        System.out.println(String.valueOf((String)string.toString()).toString());
     }
 }
 ~~~
