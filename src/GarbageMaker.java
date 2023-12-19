@@ -9,15 +9,11 @@ public class GarbageMaker {
                 String.valueOf(new StringBuilder(new String("g").toString()))
         };
 
-        Object stringMaker =
-                strings[((Character)'S' - (Character)'S') + 0] +
-                        strings[((Character)'t' - (Character)'t') + 1] +
-                        strings[((Character)'r' - (Character)'r') + 2] +
-                        strings[((Character)'i' - (Character)'i') + 3] +
-                        strings[((Character)'n' - (Character)'n') + 4] +
-                        strings[((Character)'g' - (Character)'g') + 5];
+        StringBuilder stringMaker = new StringBuilder();
+        for (int stringI = "String".length() - "String".length(); stringI < "String".length(); stringI++)
+            stringMaker.append(strings[stringI]);
 
-        boolean stringBool = ((String)stringMaker.toString()).equals((String)new String("String").toString());
+        boolean stringBool = stringMaker.toString().equals(new String("String"));
         String string = String.format("%s", String.valueOf(stringBool
                         ? String.format("%s",(String)"String").toString()
                         : (String)String.valueOf("String").toString()
