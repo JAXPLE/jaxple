@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/jaxple.iml" filepath="$PROJECT_DIR$/.idea/jaxple.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GarbageMaker.iml" filepath="$PROJECT_DIR$/GarbageMaker.iml" />
     </modules>
   </component>
 </project>
