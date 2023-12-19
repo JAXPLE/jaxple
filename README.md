@@ -1,24 +1,26 @@
 ~~~
 public class GarbageMaker {
     public static void main(String[] args) {
-        StringBuilder S = new StringBuilder(new String("S"));
-        StringBuilder t = new StringBuilder(new String("t"));
-        StringBuilder r = new StringBuilder(new String("r"));
-        StringBuilder i = new StringBuilder(new String("i"));
-        StringBuilder n = new StringBuilder(new String("n"));
-        StringBuilder g = new StringBuilder(new String("g"));
-        Object stringBuilder = S.append(t).append(r).append(i).append(n).append(g);
+        String[] strings = {
+                String.valueOf(new StringBuilder(new String("S").toString())),
+                String.valueOf(new StringBuilder(new String("t").toString())),
+                String.valueOf(new StringBuilder(new String("r").toString())),
+                String.valueOf(new StringBuilder(new String("i").toString())),
+                String.valueOf(new StringBuilder(new String("n").toString())),
+                String.valueOf(new StringBuilder(new String("g").toString()))
+        };
 
-        boolean stringBool = ((String)stringBuilder.toString()).equals((String)new String("String").toString());
+        Object stringMaker = strings[0] + strings[1] + strings[2] + strings[3] + strings[4] + strings[5];
+        boolean stringBool = ((String)stringMaker.toString()).equals((String)new String("String").toString());
         String string = String.format("%s", String.valueOf(stringBool
-                ? new String(String.format("%s","String").toString())
-                : (String)"String".toString())
+                ? String.format("%s",(String)"String").toString()
+                : String.valueOf("String".toString()))
         );
 
         stringBool = string instanceof String stringT;
         System.out.println(stringBool
-                ? new String(String.valueOf((String)string.toString()).toString())
-                : new String(String.format("%s",(String)stringBuilder.toString())).toString()
+                ? String.valueOf((String)stringMaker.toString())
+                : String.format("%s",(String)string.toString())
         );
     }
 }
