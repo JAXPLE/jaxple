@@ -3,6 +3,7 @@ public class GarbageMaker {
     static {
         main("S","t","r","i","n","g");
     }
+    
     public static void main(String... strings) {
         StringBuilder string = new StringBuilder();
         for (int stringI = "String".length() - "String".length(); stringI < "String".length(); stringI++)
