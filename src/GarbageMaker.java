@@ -13,7 +13,7 @@ public class GarbageMaker {
         boolean stringChercker = stringBuilder.toString().equals(String.class.getName().split("\\.")[2]);
         String string = String.format("%s", String.valueOf(stringChercker
                 ? String.format("%s",(String)"String").toString()
-                : (String)String.valueOf(stringBuilder.toString()).toString()
+                : (String)String.valueOf(stringBuilder.toString())
                 )
             );
 
