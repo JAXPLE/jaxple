@@ -5,7 +5,7 @@ public class GarbageMaker {
         main(ProcessingGarbage("S","t","r","i","n","g"));
     }
 
-    protected static String[] ProcessingGarbage(String... strings) {
+    protected static String[] ProcessingGarbage(String...strings) {
         StringBuilder stringBuilder = new StringBuilder();
         for (int stringI = "String".length() - "String".length(); stringI < "String".length(); stringI++)
             stringBuilder.append(strings[stringI]);
