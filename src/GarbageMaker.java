@@ -6,14 +6,14 @@ public class GarbageMaker {
     }
 
     protected static String[] ProcessingGarbage(String...strings) {
-        StringBuilder stringBuilder = new StringBuilder();
+        StringBuilder stringString = new StringBuilder();
         for (int stringI = "String".length() - "String".length(); stringI < "String".length(); stringI++)
-            stringBuilder.append(strings[stringI]);
+            stringString.append(strings[stringI]);
 
-        boolean stringChecker = String.class.getName().split("\\.")[2].equals(stringBuilder.toString());
-        String string = String.format("%s", String.valueOf(stringChecker
+        String string = String.format("%s", String.valueOf(
+                String.class.getName().split("\\.")[2].equals(stringString.toString())
                 ? String.format("%s",(String)"String").toString()
-                : (String)String.valueOf(stringBuilder.toString())
+                : (String)String.valueOf(stringString.toString())
                 )
             );
 
