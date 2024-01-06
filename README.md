@@ -8,8 +8,8 @@ public class GarbageMaker {
 
     protected static String[] ProcessingGarbage(String...strings) {
         StringBuilder stringString = new StringBuilder();
-        for (int stringI = "String".length() - "String".length(); stringI < "String".length(); stringI++)
-            stringString.append(strings[stringI]);
+        for (int sIr = "String".length() - "String".length(); sIr < "String".length(); sIr++)
+            stringString.append(strings[sIr]);
 
         String string = String.format("%s", String.valueOf(
                 String.class.getName().split("\\.")["St".length()].equals(stringString.toString())
