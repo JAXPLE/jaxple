@@ -11,7 +11,7 @@ public class GarbageMaker {
             stringString.append(strings[stringI]);
 
         String string = String.format("%s", String.valueOf(
-                String.class.getName().split("\\.")[2].equals(stringString.toString())
+                String.class.getName().split("\\.")["St".length()].equals(stringString.toString())
                 ? String.format("%s",(String)"String").toString()
                 : (String)String.valueOf(stringString.toString())
                 )
