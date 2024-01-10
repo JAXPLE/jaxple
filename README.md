@@ -5,11 +5,11 @@ public class GarbageMaker {
     static {
         main(
             ProcessingGarbage(
-       "S",
-                "t",
-                "r",
+                "S",
+                        "t",
+                    "r",
                 "i",
-                "n",
+                    "n",
                 "g"
             )
         );
