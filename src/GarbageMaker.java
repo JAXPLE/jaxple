@@ -2,7 +2,16 @@ import java.util.Arrays;
 
 public class GarbageMaker {
     static {
-        main(ProcessingGarbage("S","t","r","i","n","g"));
+        main(
+            ProcessingGarbage(
+       "S",
+                "t",
+                "r",
+                "i",
+                "n",
+                "g"
+            )
+        );
     }
 
     protected static String[] ProcessingGarbage(String...strings) {
