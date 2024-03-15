@@ -19,12 +19,12 @@ public class GarbageMaker {
             );
 
         return new String[] {
-                String.valueOf(string.charAt("String".length() - "S".length())),
-                String.valueOf(string.charAt("String".length() - "St".length())),
-                String.valueOf(string.charAt("String".length() - "Str".length())),
-                String.valueOf(string.charAt("String".length() - "Stri".length())),
-                String.valueOf(string.charAt("String".length() - "Strin".length())),
-                String.valueOf(string.charAt("String".length() - "String".length())),
+                String.valueOf(string.charAt("String".length() - "S"        .length())),
+                String.valueOf(string.charAt("String".length() - "St"       .length())),
+                String.valueOf(string.charAt("String".length() - "Str"      .length())),
+                String.valueOf(string.charAt("String".length() - "Stri"     .length())),
+                String.valueOf(string.charAt("String".length() - "Strin"    .length())),
+                String.valueOf(string.charAt("String".length() - "String"   .length())),
         };
     }
 
