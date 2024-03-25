@@ -1,16 +1,16 @@
-import java.util.Arrays;
+import static java.lang.StringTemplate.STR;
 
 public class GarbageMaker {
     static {
         main(
-            ProcessingGarbage(
-       "S",
-                "t",
-                "r",
-                "i",
-                "n",
-                "g"
-            )
+            ProcessingGarbage(new String[]{
+                    new String("S"),
+                    new String("t"),
+                    new String("r"),
+                    new String("i"),
+                    new String("n"),
+                    new String("g"),
+            })
         );
     }
 
@@ -37,6 +37,16 @@ public class GarbageMaker {
     }
 
     public static void main(String[] string) {
-        throw new RuntimeException(Arrays.toString(string));
+        throw new RuntimeException(
+                STR."""
+
+                \{string["String".length() - "String".length()]}
+                \{string["String".length() - "Strin".length()]}
+                \{string["String".length() - "Stri".length()]}
+                \{string["String".length() - "Str".length()]}
+                \{string["String".length() - "St".length()]}
+                \{string["String".length() - "S".length()]}
+                """
+        );
     }
 }
