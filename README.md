@@ -1,18 +1,34 @@
 ~~~
-import static java.lang.StringTemplate.STR;
+import java.lang.*;
 
 public class GarbageMaker {
+    static class Str {
+        class ing {
+            String S = "S";
+            String t = "t";
+            String r = "r";
+            String i = "i";
+            String n = "n";
+            String g = "g";
+        }
+    };
+
     static {
-        main(
-            ProcessingGarbage(new String[]{
-                    new String("S"),
-                    new String("t"),
-                    new String("r"),
-                    new String("i"),
-                    new String("n"),
-                    new String("g"),
-            })
-        );
+        try {
+            main(ProcessingGarbage(
+                    new String[]{
+                        new Str().new ing().S,
+                        new Str().new ing().t,
+                        new Str().new ing().r,
+                        new Str().new ing().i,
+                        new Str().new ing().n,
+                        new Str().new ing().g
+                    }
+                )
+            );
+        } catch (RuntimeException e) {
+            e.printStackTrace();
+        }
     }
 
     protected static String[] ProcessingGarbage(String...strings) {
@@ -37,19 +53,15 @@ public class GarbageMaker {
         };
     }
 
-    public static void main(String[] string) {
+    public static void main(String[] strings) {
         throw new RuntimeException(
-                STR."""
-
-                \{string["String".length() - "String".length()]}
-                \{string["String".length() - "Strin".length()]}
-                \{string["String".length() - "Stri".length()]}
-                \{string["String".length() - "Str".length()]}
-                \{string["String".length() - "St".length()]}
-                \{string["String".length() - "S".length()]}
-                """
+            strings["String".length() - "String".length()] +
+            strings["String".length() - "Strin".length()] +
+            strings["String".length() - "Stri".length()] +
+            strings["String".length() - "Str".length()] +
+            strings["String".length() - "St".length()] +
+            strings["String".length() - "S".length()]
         );
     }
 }
-
 ~~~
