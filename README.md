@@ -1,28 +1,40 @@
 ~~~
-import java.lang.*;
+import java.lang.String;
 
 public class GarbageMaker {
-    static class Str {
-        class ing {
-            String S = "S";
-            String t = "t";
-            String r = "r";
-            String i = "i";
-            String n = "n";
-            String g = "g";
+    static class Strings<String> {
+        String String;
+
+        public Strings(String string) {
+            String = string;
         }
-    };
+
+        public String getString() {
+            return String;
+        }
+    }
 
     static {
+        class Str {
+            class ing {
+                Strings<String> S = new Strings<String>("S");
+                Strings<String> t = new Strings<String>("t");
+                Strings<String> r = new Strings<String>("r");
+                Strings<String> i = new Strings<String>("i");
+                Strings<String> n = new Strings<String>("n");
+                Strings<String> g = new Strings<String>("g");
+            }
+        }
+
         try {
             main(ProcessingGarbage(
                     new String[]{
-                        new Str().new ing().S,
-                        new Str().new ing().t,
-                        new Str().new ing().r,
-                        new Str().new ing().i,
-                        new Str().new ing().n,
-                        new Str().new ing().g
+                        new Strings<String>(new Str().new ing().S.getString()).getString(),
+                        new Strings<String>(new Str().new ing().t.getString()).getString(),
+                        new Strings<String>(new Str().new ing().r.getString()).getString(),
+                        new Strings<String>(new Str().new ing().i.getString()).getString(),
+                        new Strings<String>(new Str().new ing().n.getString()).getString(),
+                        new Strings<String>(new Str().new ing().g.getString()).getString()
                     }
                 )
             );
@@ -64,4 +76,5 @@ public class GarbageMaker {
         );
     }
 }
+
 ~~~
