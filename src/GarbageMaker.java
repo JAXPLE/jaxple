@@ -1,19 +1,19 @@
 import java.lang.String;
 
 public class GarbageMaker {
-    static class Strings<String> {
-        String String;
-
-        public Strings(String string) {
-            String = string;
-        }
-
-        public String getString() {
-            return String;
-        }
-    }
-
     static {
+        class Strings<String> {
+            String String;
+
+            public Strings(String string) {
+                String = string;
+            }
+
+            public String getString() {
+                return String;
+            }
+        }
+
         class Str {
             class ing {
                 Strings<String> S = new Strings<String>("S");
