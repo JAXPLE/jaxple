@@ -1,4 +1,7 @@
 import java.lang.String;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class GarbageMaker {
     static {
@@ -16,12 +19,12 @@ public class GarbageMaker {
 
         class Str {
             static class ing {
-                String S = new Strings<String>("S").getString();
-                String t = new Strings<String>("t").getString();
-                String r = new Strings<String>("r").getString();
-                String i = new Strings<String>("i").getString();
-                String n = new Strings<String>("n").getString();
-                String g = new Strings<String>("g").getString();
+                String S = new Strings<String>("S").<String> getString();
+                String t = new Strings<String>("t").<String> getString();
+                String r = new Strings<String>("r").<String> getString();
+                String i = new Strings<String>("i").<String> getString();
+                String n = new Strings<String>("n").<String> getString();
+                String g = new Strings<String>("g").<String> getString();
             }
         }
 
@@ -65,13 +68,9 @@ public class GarbageMaker {
     }
 
     public static void main(String... Strings) {
+//                Arrays.sort(Strings, (string1, string2) -> Integer.compare(string1.charAt(0), string2.charAt(0)));
         throw new RuntimeException(
-            Strings["String".length() - "String".length()] +
-            Strings["String".length() - "Strin".length()] +
-            Strings["String".length() - "Stri".length()] +
-            Strings["String".length() - "Str".length()] +
-            Strings["String".length() - "St".length()] +
-            Strings["String".length() - "S".length()]
+                Arrays.toString(Strings)
         );
     }
 }
