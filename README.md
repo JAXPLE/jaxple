@@ -17,12 +17,12 @@ public class GarbageMaker {
 
         class Str {
             static class ing {
-                String S = new Strings<String>("S").getString();
-                String t = new Strings<String>("t").getString();
-                String r = new Strings<String>("r").getString();
-                String i = new Strings<String>("i").getString();
-                String n = new Strings<String>("n").getString();
-                String g = new Strings<String>("g").getString();
+                String S = new Strings<String>("S").<String> getString();
+                String t = new Strings<String>("t").<String> getString();
+                String r = new Strings<String>("r").<String> getString();
+                String i = new Strings<String>("i").<String> getString();
+                String n = new Strings<String>("n").<String> getString();
+                String g = new Strings<String>("g").<String> getString();
             }
         }
 
