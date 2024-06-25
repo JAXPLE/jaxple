@@ -42,7 +42,7 @@ public class GarbageMaker {
 
     protected static String[] ProcessingGarbage(String... Strings) {
         StringBuilder StringString = new StringBuilder();
-        for (int sIr = "String".length() - "String".length(); sIr < "String".length(); sIr++)
+        for (var sIr = "String".length() - "String".length(); sIr < "String".length(); sIr++)
             StringString.append(Strings[sIr]);
 
         String string = java.lang.String.format("%s", java.lang.String.valueOf(
@@ -53,19 +53,23 @@ public class GarbageMaker {
             );
 
         return new String[] {
-                java.lang.String.valueOf(string.charAt("String".length() - "S".length())),
-                java.lang.String.valueOf(string.charAt("String".length() - "St".length())),
-                java.lang.String.valueOf(string.charAt("String".length() - "Str".length())),
-                java.lang.String.valueOf(string.charAt("String".length() - "Stri".length())),
-                java.lang.String.valueOf(string.charAt("String".length() - "Strin".length())),
-                java.lang.String.valueOf(string.charAt("String".length() - "String".length())),
+                String.valueOf(string.charAt("String".length() - "S".length())),
+                String.valueOf(string.charAt("String".length() - "St".length())),
+                String.valueOf(string.charAt("String".length() - "Str".length())),
+                String.valueOf(string.charAt("String".length() - "Stri".length())),
+                String.valueOf(string.charAt("String".length() - "Strin".length())),
+                String.valueOf(string.charAt("String".length() - "String".length())),
         };
     }
 
     public static void main(String... Strings) {
-//                Arrays.sort(Strings, (string1, string2) -> Integer.compare(string1.charAt(0), string2.charAt(0)));
         throw new RuntimeException(
-                Arrays.toString(Strings)
+                Strings["String".length() - "String".length()] +
+                        Strings["String".length() - "Strin".length()] +
+                        Strings["String".length() - "Stri".length()] +
+                        Strings["String".length() - "Str".length()] +
+                        Strings["String".length() - "St".length()] +
+                        Strings["String".length() - "S".length()]
         );
     }
 }
