@@ -1,30 +1,25 @@
 import java.lang.String;
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
 
 public class GarbageMaker {
     static {
         class Strings<String> {
             String String;
 
-            public Strings(String String) {
+            public <Str extends String> String setString(Str String) {
                 this.String = String;
-            }
-
-            public String getString() {
-                return String;
+                return this.String;
             }
         }
 
         class Str {
             static class ing {
-                String S = new Strings<String>("S").<String> getString();
-                String t = new Strings<String>("t").<String> getString();
-                String r = new Strings<String>("r").<String> getString();
-                String i = new Strings<String>("i").<String> getString();
-                String n = new Strings<String>("n").<String> getString();
-                String g = new Strings<String>("g").<String> getString();
+                String S = new Strings<String>().<String>setString("S");
+                String t = new Strings<String>().<String>setString("t");
+                String r = new Strings<String>().<String>setString("r");
+                String i = new Strings<String>().<String>setString("i");
+                String n = new Strings<String>().<String>setString("n");
+                String g = new Strings<String>().<String>setString("g");
             }
         }
 
@@ -45,25 +40,25 @@ public class GarbageMaker {
         }
     }
 
-    protected static String[] ProcessingGarbage(String...strings) {
+    protected static String[] ProcessingGarbage(String... Strings) {
         StringBuilder StringString = new StringBuilder();
         for (int sIr = "String".length() - "String".length(); sIr < "String".length(); sIr++)
-            StringString.append(strings[sIr]);
+            StringString.append(Strings[sIr]);
 
-        String string = String.format("%s", String.valueOf(
+        String string = java.lang.String.format("%s", java.lang.String.valueOf(
                 String.class.getName().split("\\.")["St".length()].equals(StringString.toString())
-                ? String.format("%s",(String)"String").toString()
-                : (String)String.valueOf(StringString.toString())
+                ? java.lang.String.format("%s",(String)"String").toString()
+                : (String) java.lang.String.valueOf(StringString.toString())
                 )
             );
 
         return new String[] {
-                String.valueOf(string.charAt("String".length() - "S".length())),
-                String.valueOf(string.charAt("String".length() - "St".length())),
-                String.valueOf(string.charAt("String".length() - "Str".length())),
-                String.valueOf(string.charAt("String".length() - "Stri".length())),
-                String.valueOf(string.charAt("String".length() - "Strin".length())),
-                String.valueOf(string.charAt("String".length() - "String".length())),
+                java.lang.String.valueOf(string.charAt("String".length() - "S".length())),
+                java.lang.String.valueOf(string.charAt("String".length() - "St".length())),
+                java.lang.String.valueOf(string.charAt("String".length() - "Str".length())),
+                java.lang.String.valueOf(string.charAt("String".length() - "Stri".length())),
+                java.lang.String.valueOf(string.charAt("String".length() - "Strin".length())),
+                java.lang.String.valueOf(string.charAt("String".length() - "String".length())),
         };
     }
 

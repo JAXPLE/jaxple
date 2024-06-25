@@ -6,23 +6,20 @@ public class GarbageMaker {
         class Strings<String> {
             String String;
 
-            public Strings(String String) {
+            public <Str extends String> String setString(Str String) {
                 this.String = String;
-            }
-
-            public String getString() {
-                return String;
+                return this.String;
             }
         }
 
         class Str {
             static class ing {
-                String S = new Strings<String>("S").<String> getString();
-                String t = new Strings<String>("t").<String> getString();
-                String r = new Strings<String>("r").<String> getString();
-                String i = new Strings<String>("i").<String> getString();
-                String n = new Strings<String>("n").<String> getString();
-                String g = new Strings<String>("g").<String> getString();
+                String S = new Strings<String>().<String>setString("S");
+                String t = new Strings<String>().<String>setString("t");
+                String r = new Strings<String>().<String>setString("r");
+                String i = new Strings<String>().<String>setString("i");
+                String n = new Strings<String>().<String>setString("n");
+                String g = new Strings<String>().<String>setString("g");
             }
         }
 
