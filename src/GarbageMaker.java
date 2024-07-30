@@ -6,7 +6,11 @@ public class GarbageMaker {
         class Strings<String> {
             String String;
 
-            public <Str extends String> String setString(Str String) {
+            protected Strings(String string) {
+                this.String = setString(string);
+            }
+
+            private <Str extends String> String setString(Str String) {
                 this.String = String;
                 return this.String;
             }
@@ -14,12 +18,12 @@ public class GarbageMaker {
 
         class Str {
             static class ing {
-                String S = new Strings<String>().<String>setString("S");
-                String t = new Strings<String>().<String>setString("t");
-                String r = new Strings<String>().<String>setString("r");
-                String i = new Strings<String>().<String>setString("i");
-                String n = new Strings<String>().<String>setString("n");
-                String g = new Strings<String>().<String>setString("g");
+                String S = new Strings<String>("S").<String>setString("g");
+                String t = new Strings<String>("t").<String>setString("n");
+                String r = new Strings<String>("r").<String>setString("i");
+                String i = new Strings<String>("i").<String>setString("r");
+                String n = new Strings<String>("n").<String>setString("t");
+                String g = new Strings<String>("g").<String>setString("S");
             }
         }
 
