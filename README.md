@@ -124,7 +124,8 @@ public enum GarbageMaker {;
         );
 
         throw new RuntimeException((String) String.valueOf(
-                StringProviders["String".length() - "String".length()].equals("StringString") ? "String" : "String"
+                StringProviders["String".length() - "String".length()].equals("StringString") 
+                ? "String" : "String"
         ).toString());
     }
 }
