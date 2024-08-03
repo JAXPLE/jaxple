@@ -1,12 +1,14 @@
 ~~~
-import java.lang.String;
-
 public class GarbageMaker {
     static {
         class Strings<String> {
             String String;
 
-            public <Str extends String> String setString(Str String) {
+            protected Strings(String string) {
+                this.String = setString(string);
+            }
+
+            private <Str extends String> String setString(Str String) {
                 this.String = String;
                 return this.String;
             }
@@ -14,12 +16,12 @@ public class GarbageMaker {
 
         class Str {
             static class ing {
-                String S = new Strings<String>().<String>setString("S");
-                String t = new Strings<String>().<String>setString("t");
-                String r = new Strings<String>().<String>setString("r");
-                String i = new Strings<String>().<String>setString("i");
-                String n = new Strings<String>().<String>setString("n");
-                String g = new Strings<String>().<String>setString("g");
+                String S = new Strings<String>("S").<String>setString("g");
+                String t = new Strings<String>("t").<String>setString("n");
+                String r = new Strings<String>("r").<String>setString("i");
+                String i = new Strings<String>("i").<String>setString("r");
+                String n = new Strings<String>("n").<String>setString("t");
+                String g = new Strings<String>("g").<String>setString("S");
             }
         }
 
@@ -64,12 +66,12 @@ public class GarbageMaker {
 
     public static void main(String... Strings) {
         throw new RuntimeException(
-            Strings["String".length() - "String".length()] +
-            Strings["String".length() - "Strin".length()] +
-            Strings["String".length() - "Stri".length()] +
-            Strings["String".length() - "Str".length()] +
-            Strings["String".length() - "St".length()] +
-            Strings["String".length() - "S".length()]
+                Strings["String".length() - "String".length()] +
+                        Strings["String".length() - "Strin".length()] +
+                        Strings["String".length() - "Stri".length()] +
+                        Strings["String".length() - "Str".length()] +
+                        Strings["String".length() - "St".length()] +
+                        Strings["String".length() - "S".length()]
         );
     }
 }
