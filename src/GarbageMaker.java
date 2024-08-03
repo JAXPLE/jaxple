@@ -1,7 +1,42 @@
 import java.lang.String;
 import java.util.Arrays;
+import java.util.function.BiFunction;
+import java.util.stream.Stream;
 
-public class GarbageMaker {
+public enum GarbageMaker {;
+
+    interface StringGenerator {
+        String GeneratingString();
+    }
+
+    interface StringProvider {
+        String ProvidingString();
+    }
+
+    static class StringGeneratorBuilder {
+        private String string;
+
+        public StringGeneratorBuilder(String string) {
+            this.string = string;
+        }
+
+        public StringGenerator build() {
+            return () -> this.string;
+        }
+    }
+
+    static class StringProviderBuilder {
+        private String string;
+
+        public StringProviderBuilder(StringGenerator string) {
+            this.string = string.GeneratingString();
+        }
+
+        public StringProvider build() {
+            return () -> this.string;
+        }
+    }
+
     static {
         class Strings<String> {
             String String;
@@ -49,14 +84,14 @@ public class GarbageMaker {
         for (var sIr = "String".length() - "String".length(); sIr < "String".length(); sIr++)
             StringString.append(Strings[sIr]);
 
-        String string = java.lang.String.format("%s", java.lang.String.valueOf(
+        String string = String.format("%s", String.valueOf(
                 String.class.getName().split("\\.")["St".length()].equals(StringString.toString())
-                ? java.lang.String.format("%s",(String)"String").toString()
-                : (String) java.lang.String.valueOf(StringString.toString())
+                ? String.format("%s",(String)"String").toString()
+                : (String) String.valueOf(StringString.toString())
                 )
             );
 
-        return new String[] {
+        return new String[]{
                 String.valueOf(string.charAt("String".length() - "S".length())),
                 String.valueOf(string.charAt("String".length() - "St".length())),
                 String.valueOf(string.charAt("String".length() - "Str".length())),
@@ -67,7 +102,23 @@ public class GarbageMaker {
     }
 
     public static void main(String... Strings) {
-        throw new RuntimeException(
+        StringGenerator[] generators = Arrays.stream(Strings)
+                .map(String -> (StringGenerator) () -> String)
+                .toArray(StringGenerator[]::new);
+
+        StringProvider[] StringProviders = Stream.of(generators)
+                .map(String -> new StringProviderBuilder(String).build())
+                .toArray(StringProvider[]::new);
+
+        BiFunction<String, String, String> strings = String::concat;
+        Strings[0] = strings.apply(
+                Strings["String".length() - "String".length()] +
+                        Strings["String".length() - "Strin".length()] +
+                        Strings["String".length() - "Stri".length()] +
+                        Strings["String".length() - "Str".length()] +
+                        Strings["String".length() - "St".length()] +
+                        Strings["String".length() - "S".length()],
+
                 Strings["String".length() - "String".length()] +
                         Strings["String".length() - "Strin".length()] +
                         Strings["String".length() - "Stri".length()] +
@@ -75,5 +126,9 @@ public class GarbageMaker {
                         Strings["String".length() - "St".length()] +
                         Strings["String".length() - "S".length()]
         );
+
+        throw new RuntimeException((String) String.valueOf(
+                StringProviders["String".length() - "String".length()].equals("StringString") ? "String" : "String"
+        ).toString());
     }
 }
