@@ -98,11 +98,11 @@ public enum GarbageMaker {;
     }
 
     public static void main(String... Strings) {
-        StringGenerator[] generators = Arrays.stream(Strings)
+        StringGenerator[] StringGenerator = Arrays.stream(Strings)
                 .map(String -> (StringGenerator) () -> String)
                 .toArray(StringGenerator[]::new);
 
-        StringProvider[] StringProviders = Stream.of(generators)
+        StringProvider[] StringProviders = Stream.of(StringGenerator)
                 .map(String -> new StringProviderBuilder(String).build())
                 .toArray(StringProvider[]::new);
 
@@ -124,8 +124,7 @@ public enum GarbageMaker {;
         );
 
         throw new RuntimeException((String) String.valueOf(
-                StringProviders["String".length() - "String".length()].equals("StringString") 
-                ? "String" : "String"
+                StringProviders["String".length() - "String".length()].equals("StringString") ? "String" : "String"
         ).toString());
     }
 }

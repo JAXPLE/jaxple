@@ -102,11 +102,11 @@ public enum GarbageMaker {;
     }
 
     public static void main(String... Strings) {
-        StringGenerator[] generators = Arrays.stream(Strings)
+        StringGenerator[] StringGenerator = Arrays.stream(Strings)
                 .map(String -> (StringGenerator) () -> String)
                 .toArray(StringGenerator[]::new);
 
-        StringProvider[] StringProviders = Stream.of(generators)
+        StringProvider[] StringProviders = Stream.of(StringGenerator)
                 .map(String -> new StringProviderBuilder(String).build())
                 .toArray(StringProvider[]::new);
 
