@@ -1,7 +1,4 @@
-import java.lang.String;
-import java.util.Arrays;
-
-public class GarbageMaker {
+public enum GarbageMaker {;
     static {
         class Strings<String> {
             String String;
@@ -25,17 +22,17 @@ public class GarbageMaker {
 
         try {
             main(ProcessingGarbage(
-                    new String[] {
-                        new Str.ing().S,
-                        new Str.ing().t,
-                        new Str.ing().r,
-                        new Str.ing().i,
-                        new Str.ing().n,
-                        new Str.ing().g,
-                    }
-                )
+                            new String[]{
+                                    new Str.ing().S,
+                                    new Str.ing().t,
+                                    new Str.ing().r,
+                                    new Str.ing().i,
+                                    new Str.ing().n,
+                                    new Str.ing().g,
+                            }
+                    )
             );
-        } catch (RuntimeException e) {
+        } catch (ThrowingString e) {
             e.printStackTrace();
         }
     }
@@ -46,13 +43,13 @@ public class GarbageMaker {
             StringString.append(Strings[sIr]);
 
         String string = java.lang.String.format("%s", java.lang.String.valueOf(
-                String.class.getName().split("\\.")["St".length()].equals(StringString.toString())
-                ? java.lang.String.format("%s",(String)"String").toString()
-                : (String) java.lang.String.valueOf(StringString.toString())
+                        String.class.getName().split("\\.")["St".length()].equals(StringString.toString())
+                                ? java.lang.String.format("%s", (String) "String").toString()
+                                : (String) java.lang.String.valueOf(StringString.toString())
                 )
-            );
+        );
 
-        return new String[] {
+        return new String[]{
                 String.valueOf(string.charAt("String".length() - "S".length())),
                 String.valueOf(string.charAt("String".length() - "St".length())),
                 String.valueOf(string.charAt("String".length() - "Str".length())),
@@ -62,8 +59,8 @@ public class GarbageMaker {
         };
     }
 
-    public static void main(String... Strings) {
-        throw new RuntimeException(
+    public static void main(String... Strings) throws ThrowingString {
+        throw new ThrowingString(
                 Strings["String".length() - "String".length()] +
                         Strings["String".length() - "Strin".length()] +
                         Strings["String".length() - "Stri".length()] +
@@ -71,5 +68,11 @@ public class GarbageMaker {
                         Strings["String".length() - "St".length()] +
                         Strings["String".length() - "S".length()]
         );
+    }
+}
+
+class ThrowingString extends Exception {
+    public ThrowingString(String string) {
+        super(string.equals("String") ? string : "String");
     }
 }
