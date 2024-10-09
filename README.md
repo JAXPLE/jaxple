@@ -34,7 +34,7 @@ public enum GarbageMaker {;
                     )
             );
         } catch (SSSString e) {
-            System.err.println(e.niceCatchButIsStringLOL());
+            System.err.println(e.goodCatchButImGonnaGiveYouStringLOL());
         }
     }
 
@@ -77,7 +77,7 @@ class SSSString extends Exception {
         super(string.equals("String") ? string : "String");
     }
 
-    public String niceCatchButIsStringLOL() {
+    public String goodCatchButImGonnaGiveYouStringLOL() {
         return "String";
     }
 }
