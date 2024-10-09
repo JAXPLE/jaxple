@@ -32,8 +32,8 @@ public enum GarbageMaker {;
                             }
                     )
             );
-        } catch (ThrowingString e) {
-            e.printStackTrace();
+        } catch (SSSString e) {
+            System.err.println(e.niceCatchButIsStringLOL());
         }
     }
 
@@ -59,8 +59,8 @@ public enum GarbageMaker {;
         };
     }
 
-    public static void main(String... Strings) throws ThrowingString {
-        throw new ThrowingString(
+    public static void main(String... Strings) throws SSSString {
+        throw new SSSString(
                 Strings["String".length() - "String".length()] +
                         Strings["String".length() - "Strin".length()] +
                         Strings["String".length() - "Stri".length()] +
@@ -71,8 +71,12 @@ public enum GarbageMaker {;
     }
 }
 
-class ThrowingString extends Exception {
-    public ThrowingString(String string) {
+class SSSString extends Exception {
+    public SSSString(String string) {
         super(string.equals("String") ? string : "String");
+    }
+
+    public String niceCatchButIsStringLOL() {
+        return "String";
     }
 }
