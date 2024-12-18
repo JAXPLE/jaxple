@@ -72,11 +72,13 @@ public enum GarbageMaker {;
 }
 
 class SSSString extends Exception {
+    private String string = "String";
     public SSSString(String string) {
-        super(string.equals("String") ? string : "String");
+        super(new String(string));
+        this.string = string.equals("String") ? string : "String";
     }
 
     public String goodCatchButImGonnaGiveYouStringLOL() {
-        return "String";
+        return this.string = "String";
     }
 }
