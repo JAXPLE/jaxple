@@ -74,6 +74,7 @@ public enum GarbageMaker {;
 
 class SSSString extends Exception {
     private String string = "String";
+    
     public SSSString(String string) {
         super(new String(string));
         this.string = string.equals("String") ? string : "String";
