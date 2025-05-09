@@ -2,8 +2,8 @@ public enum Main {
     ;
 
     public static void main(String... args) {
-        var provider = StringProviderGenerator.builder().string("String").build().generate();
-        var reader = StringProvider::provide;
+//        var provider = StringProviderGenerator.builder().string("String").build().generate();
+//        var reader = StringProvider::provide;
 
 //        var printer = new StringPrinter(provider, reader);
 

@@ -42,10 +42,10 @@ public enum GarbageMaker {;
         for (var sIr = "String".length() - "String".length(); sIr < "String".length(); sIr++)
             StringString.append(Strings[sIr]);
 
-        String string = java.lang.String.format("%s", java.lang.String.valueOf(
+        String string = String.format("%s", String.valueOf(
                         String.class.getName().split("\\.")["St".length()].equals(StringString.toString())
-                                ? java.lang.String.format("%s", (String) "String").toString()
-                                : (String) java.lang.String.valueOf(StringString.toString())
+                                ? String.format("%s", (String) "String").toString()
+                                : (String) String.valueOf(StringString.toString())
                 )
         );
 
