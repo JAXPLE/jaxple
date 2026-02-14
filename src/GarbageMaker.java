@@ -4,8 +4,8 @@ public enum GarbageMaker {;
             String String;
 
             public <Str extends String> String setString(Str String) {
-                this.String = String;
-                return this.String;
+                String = String;
+                return String;
             }
         }
 
@@ -76,10 +76,10 @@ class SSSString extends Exception {
 
     public SSSString(String string) {
         super(new String(string));
-        this.string = string.equals("String") ? string : "String";
+        string = string.equals("String") ? string : "String";
     }
 
     public String goodCatchButImGonnaGiveYouStringLOL() {
-        return this.string = "String";
+        return string = "String";
     }
 }
