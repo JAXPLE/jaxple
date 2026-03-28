@@ -4,7 +4,6 @@
 
 * **Language:** Java, C++
 * **Framework:** MFC
-* **Server & API:** Telegram API, Google Translate API, TradingView Webhook
 * **Tool:** Visual Studio, Visual Studio Code, Tortoise SVN, GitHub
 
 
