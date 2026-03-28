@@ -1,3 +1,4 @@
+
 public enum GarbageMaker {;
     static {
         class Strings<String> {
