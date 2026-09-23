@@ -2,9 +2,9 @@
 
 ## Tech Stack
 
-* **Language:** Java, C++
+* **Language:** Java, C++, React
 * **Framework:** MFC
-* **Tool:** Visual Studio, Visual Studio Code, Tortoise SVN, GitHub
+* **Tool:** Visual Studio, Visual Studio Code, Tortoise SVN, GitHub, Gitlab, Jira
 
 
 ## Selected Works
